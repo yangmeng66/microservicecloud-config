@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active:
+    - dev
+
+---
+spring:
+  port: 8201
+  profiles: dev
+  application:
+    name: microservicecloud-config-cyym-cliet-dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+---
+spring:
+  port: 8202
+  profiles: test
+  application:
+    name: microservicecloud-config-cyym-cliet-test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
